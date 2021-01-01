@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
     <title>Stopwatch</title>
     <script>
         var	clsStopwatch = function() {
@@ -16,6 +15,7 @@
 		// Public methods
 		// Start or resume
 		this.start = function() {
+
 				startAt	= startAt ? startAt : now();
 			};
 
@@ -71,6 +71,7 @@ function update() {
 }
 
 function start() {
+
 	clocktimer = setInterval("update()", 1);
 	x.start();
 }
@@ -87,10 +88,26 @@ function reset() {
 }
     </script>
 </head>
-<body onload="show();">
-	<div>Time: <span id="time"></span></div>
-	<input type="button" value="start" onclick="start();">
-	<input type="button" value="stop" onclick="stop();">
-	<input type="button" value="reset" onclick="reset()">
+
+<body onload="show();" background="https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg">
+	<center>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+	<div><p style="font-size:50px; color:whitesmoke">STOP WATCH:</p> <span id="time" style="font-size: 50px; color:whitesmoke"></span></div><br>
+	
+	<input type="button" value="start" onclick="start();" style="font-size:50px; background-color:khaki; color:green " >
+	<input type="button" value="reset" onclick="reset();" style="font-size:50px; background-color:black; color:gray ">
+	<input type="button" value="stop" onclick="stop();" style="font-size:50px; background-color:khaki; color:red">
+	
+
+</center>
 </body>
+
 </html>
